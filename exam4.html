@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3의 배수 찾기</title>
+    <style>
+        /* 빨간색 스타일링 */
+        .red-text {
+            color: red;
+        }
+
+        /* 검은색 스타일링 */
+        .black-text {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h1 class='black-text'>3의 배수 찾기</h1>");
+
+        var userInput = prompt("몇 까지 3의 배수를 찾을까요?");
+        
+        if (userInput !== null) {
+            var number = parseInt(userInput);
+            var count = 0;
+            var multiples = [];
+
+            for (var i = 1; i <= number; i++) {
+                if (i % 3 === 0) {
+                    multiples.push(i);
+                    count++;
+                }
+            }
+
+            document.write("<p>찾은 3의 배수: " + multiples.join(", ") + "</p>");
+            document.write("<p class='red-text'>" + number + "까지 3의 배수의 개수: " + count + "</p>");
+        }
+    </script>
+</body>
+</html>
